@@ -32,7 +32,7 @@ prev1_close = float(stock_data["Time Series (Daily)"][list(stock_data["Time Seri
 prev2_close = float(stock_data["Time Series (Daily)"][list(stock_data["Time Series (Daily)"].keys())[1]]["4. close"])
 change_percent = round(((prev1_close - prev2_close) / prev1_close) * 100, 2)
 
-if change_percent <= -1 or change_percent >= 1:
+if change_percent <= -5 or change_percent >= 5:
     if change_percent <= 0:
         change_percent *= -1
         line_1 = f"{STOCK}: 🔻{change_percent}%"
